@@ -1,13 +1,13 @@
 <div class="container">
     <h1>Nationality Predictor</h1>
     <input  [(ngModel)]="name" placeholder="Enter a name">
-    <button (click)="predictNationality()">Predict</button>
+    <button (click)="predictNationality()">Predict Country</button>
   
     <div *ngIf="predictions.length > 0">
-      <h2>Predicted Nationalities:</h2>
+      <h2>Predicted Nationalities</h2>
       <ul>
         <li *ngFor="let prediction of predictions">
-          {{ prediction.country }} (Probability: {{ prediction.probability }})
+          {{ prediction.country }} - {{ prediction.probability }} Probability 
         </li>
       </ul>
     </div>
