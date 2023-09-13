@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>Nationality Predictor</h1>
+    <input  [(ngModel)]="name" placeholder="Enter a name">
+    <button (click)="predictNationality()">Predict</button>
+  
+    <div *ngIf="predictions.length > 0">
+      <h2>Predicted Nationalities:</h2>
+      <ul>
+        <li *ngFor="let prediction of predictions">
+          {{ prediction.country }} (Probability: {{ prediction.probability }})
+        </li>
+      </ul>
+    </div>
+  </div>
